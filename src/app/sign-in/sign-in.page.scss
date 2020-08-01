@@ -4,6 +4,7 @@
   --padding-end: 16px;
   --padding-start: 16px;
   --padding-top: 16px;
+  --background-color: transparent;
 
   .auth-title {
     font-weight: bold;
@@ -22,6 +23,7 @@
       --padding-start: 0px;
       --padding-end: 0px;
       --inner-padding-end: 0px;
+      --background-color: transparent;
     }
   }
 
@@ -52,4 +54,11 @@
       --padding-end: 0px;
     }
   }
+  .bg-transparent {
+    background: transparent;
+  }
+  
+}
+ion-content.background{ 
+  --background: url('../../assets/img/login.png');
 }
