@@ -1,21 +1,25 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
+  <ion-toolbar color="secondary">
+      <ion-buttons  slot="start">
+          <ion-menu-button color="light"></ion-menu-button>
       </ion-buttons>
-      <ion-title>
+      <ion-title color="light">
           Govoyage
       </ion-title>
    </ion-toolbar>
 </ion-header>
 
-<ion-content> 
-  <div *ngIf="status">
+<ion-content >
+ 
+  <div class="tripsslider" *ngIf="status">
+
     <ion-slides pager="true" [options]="slideOpts" >  
+    <div class="swiper-slide img">
      <ion-slide>  
+      
         <img src="../../assets/img/Basilica-of-Bom-Jesus.jpg"/>  
-        
-      </ion-slide>  
+     
+              </ion-slide>  
     
       <ion-slide>  
         <img src="../../assets/img/Calangute-Beach.jpg"/>  
@@ -25,51 +29,53 @@
       <ion-slide>  
         <img src="../../assets/img/Sinquerim-Beach.jpg"/>  
         
-      </ion-slide>  
-    
+      </ion-slide>
+  
+    </div>
     </ion-slides>  
+  
+  </div>
+  <div class="hello">
     
       <h1>Goa</h1>
-      <p> No other destination can compete with the <ion-text color="primary">“Pearl of the Orient” 
+      <p> No other destination can compete with the <ion-text color="success">“Pearl of the Orient” 
       </ion-text>in terms of natural beauty and tranquil beaches that collaboratively provide 
       you with an out of the world holiday experience. 
-      Frequently known as  <ion-text color="secondary">“Queen of the Beaches”</ion-text>, Goa is located on the western coast of India, 
+      Frequently known as  <ion-text color="success">“Queen of the Beaches”</ion-text>, Goa is located on the western coast of India, 
       surrounded by Maharashtra in the north, Karnataka in the east and south,
        and the Arabian Sea in the west.
      
   </p>
 </div>
- 
- 
-  </ion-content>
 
+  </ion-content>
 
 <ion-tabs>
 
-  <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="events" (click)="hide()">
-          <ion-icon name="megaphone-outline"></ion-icon>
-          <ion-label>Events</ion-label>
+  <ion-tab-bar color="light" slot="bottom">
+      <ion-tab-button  tab="events" (click)="hide()">
+          <ion-icon color="success" name="megaphone-outline"></ion-icon>
+          <ion-label color="success">Events</ion-label>
       </ion-tab-button>
 
       <ion-tab-button tab="tab2" (click)="hide()">
-          <ion-icon name="ellipse"></ion-icon>
-          <ion-label>Tab 2</ion-label>
+          <ion-icon color="success" name="ellipse"></ion-icon>
+          <ion-label color="success">Tab 2</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="nearby" (click)="hide()">
-          <ion-icon name="location-sharp"></ion-icon>
-          <ion-label>Nearby</ion-label>
+      <ion-tab-button  tab="nearby" (click)="hide()">
+          <ion-icon color="success" name="location-sharp"></ion-icon>
+          <ion-label color="success">Nearby</ion-label>
       </ion-tab-button>
 
       <ion-tab-button tab="help" (click)="hide()">
-          <ion-icon name="chatbubbles-sharp"></ion-icon>
-          <ion-label>Help</ion-label>
+          <ion-icon color="success" name="chatbubbles-sharp"></ion-icon>
+          <ion-label color="success">Help</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="profile" (click)="hide()">
-          <ion-icon name="person-circle-sharp"></ion-icon>
-          <ion-label>Profile</ion-label>
+      <ion-tab-button  tab="profile" (click)="hide()">
+          <ion-icon color="success" name="person-circle-sharp"></ion-icon>
+          <ion-label color="success">Profile</ion-label>
       </ion-tab-button>
   </ion-tab-bar>
 

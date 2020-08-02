@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-title>
      Destination
      
@@ -7,9 +7,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
+<ion-content>
   
-  <ion-card *ngFor="let image of images">
+  <ion-card color="primary" *ngFor="let image of images">
     <ion-img [src]="image.url"></ion-img>
     <ion-card-header>
       <ion-card-subtitle>{{ image.name }}</ion-card-subtitle>
