@@ -1,81 +1,147 @@
-Customize your schedule by our suggestions 
-<ion-header color="secondary">
-  <ion-toolbar color="secondary">
+<ion-header [translucent]="true">
+  <ion-toolbar>
     <ion-title>
-      TRIP PLANNER
+      Plan Your Trip
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item color="secondary">
-  <ion-label>
-  Famous Hotels 
-  </ion-label>
-</ion-item>
-<li>Double tree by Hilton Goa</li>
-<li>Grand Hyatt Goa</li>
-<li>Bambolim Beach Resort</li>
-<li>Casa Menezes</li>
-<li>Hotel Travellers Inn</li>
-<li>Casa Britona</li>
-<li>The Fern Kadamba</li>
-  <ion-item color="secondary" >
-  <ion-label>
- North Goa Beaches Sightseeing
-  </ion-label>
-</ion-item  >
-<li>Baga Beach</li>
-<li>Calangute Beach</li>
-<li>Sinquerium Beach</li>
-<li>Vagator Beach</li>
-<li>Arjuna Beach</li>
+  <ion-item>
+    <ion-label>Price</ion-label>
+    <ion-select value="price">
+      <ion-select-option value="1000">1000</ion-select-option>
+      <ion-select-option value="2000">2000</ion-select-option>
+      <ion-select-option value="3000">3000</ion-select-option>
+      <ion-select-option value="4000">4000</ion-select-option>
+      <ion-select-option value="5000">5000</ion-select-option>
+      <ion-select-option value="6000">6000</ion-select-option>
+      <ion-select-option value="7000">7000</ion-select-option>
+      <ion-select-option value="8000">8000</ion-select-option>
+      <ion-select-option value="9000">9000</ion-select-option>
+      <ion-select-option value="10000">10000</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Age</ion-label>
+    <ion-select value="age">
+      <ion-select-option value="kids">Kids</ion-select-option>
+      <ion-select-option value="agebelow18"><18</ion-select-option>
+      <ion-select-option value="ageabove18">>18</ion-select-option>
+      <ion-select-option value="age30-50">30-50</ion-select-option>
+      <ion-select-option value="ageabove60">60+</ion-select-option>
+  
 
-<ion-item color="secondary" >
-  <ion-label>
-   North Goa Monuments
-  </ion-label>
-</ion-item>
-<li>Azad Midan</li>
-<li>Basilica of Bom Jesus</li>
-<li>The Se Cathedral</li>
-<li>Aguada Fort </li>
-<li>Church of St. Cajetan</li>
-<ion-item color="secondary" >
-  <ion-label>
-South Goa Sightseeing
-  </ion-label>
-</ion-item>
-<li>Colva Beach</li>
-<li>Palolem Beach</li>
-<li>Benaulim Beach</li>
-<li>Pandavas Caves</li>
-<li>Cabo de Rama Fort</li>
-<li>Polem Beach</li>
-<ion-item color="secondary">
-  <ion-label >
-   Temples to visit
-  </ion-label>
-</ion-item>
-<li>Shree Shantadurga Temple at Kavlem</li>
- <li>Shree Manguesh Temple at Priol</li>
-<li>Shiva Temple at Goa Velha</li>
-<li>shree Saptakoteshwar Temple at Maem</li>
-<li>Maruti Temple at Panaji</li>
-<li>Shree Nagesh Maharuda Mandir at Ponda</li>
-<li>Shree mahalakshmi Temple at Panaji</li>
-<li>Shree Ramnath Mandir at Ponda </li>
-<ion-item color="secondary" >
-  <ion-label >
-    Night life in Goa
-  </ion-label>
-</ion-item >
-<li>Club Tito's Goa</li>
-<li>Club Cubana</li>
-<li>LKP Waterfront Club</li>
-<li>SinQ Night Club</li>
-<li>Curlies Beach Shack</li>
-<li>Britto's Beachside bar</li>
-<li>Deltin Royale Casino</li>
-<li>Offshore Casino</li>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Number of Days</ion-label>
+    <ion-select id="abc" value="days">
+      <ion-select-option  value="1">1</ion-select-option>
+      <ion-select-option value="2">2</ion-select-option>
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
+      <ion-select-option value="5">5</ion-select-option>
+      <ion-select-option value="6">6</ion-select-option>
+      <ion-select-option value="7">7</ion-select-option>
+      <ion-select-option value="8">8</ion-select-option>
+      <ion-select-option value="9">9</ion-select-option>
+      <ion-select-option value="10">10</ion-select-option>
+
+
+
+    </ion-select>
+  </ion-item>
+  <section>
+    <div class="apple">
+      <ion-button  expand="block" (click)="plancreate()">Create new plan for me</ion-button>
+    </div>
+  </section>
+  
+  
+
+  <div   class="horizontal-cards" >
+    <div *ngIf="status1" id="cardday1">
+    <ion-card   value="100"  type="button"  (click)="Day1()" color="primary" >
+      <img src="../../assets/img/Beach.jpg">
+      <ion-card-header>
+        <ion-card-subtitle >Day 1</ion-card-subtitle>
+      </ion-card-header>
+
+    </ion-card>
+    </div>
+    <div *ngIf="status2" id="cardday2">
+    <ion-card id="cardday2"  type="button" (click)="Day2()" color="primary">
+      <img src="../../assets/img/boat.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Day 2</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </div>
+    <div *ngIf="status3" id="cardday3">
+    <ion-card id="cardday3"  type="button" (click)="Day3()" color="primary">
+      <img src="../../assets/img/lake.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Day 3</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </div>
+    <div *ngIf="status4" id="cardday4">
+    <ion-card  type="button" (click)="Day4()" color="primary">
+      <img src="../../assets/img/path.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Day 4</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </div>
+    <div *ngIf="status5" id="cardday5">
+    <ion-card  type="button" (click)="Day5()" color="primary">
+      <img src="../../assets/img/People.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Day5</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </div>
+    <div *ngIf="status6" id="cardday6">
+    <ion-card  type="button" (click)="Day6()" color="primary">
+      <img src="../../assets/img/scenary.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Day 6</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </div>
+    <div *ngIf="status7" id="cardday7">
+    <ion-card  type="button" (click)="Day7()" color="primary">
+      <img src="../../assets/img/sea.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Day 7</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </div>
+    <div *ngIf="status8" id="cardday8">
+    <ion-card  type="button" (click)="Day8()" color="primary">
+      <img src="../../assets/img/trees.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Day 8</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </div>
+    <div *ngIf="status9" id="cardday9">
+    <ion-card  type="button" (click)="Day9()" color="primary">
+      <img src="../../assets/img/sand.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Day 9</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </div>
+    <div *ngIf="status10" id="cardday10">
+    <ion-card  type="button" (click)="Day10()" color="primary">
+      <img src="../../assets/img/view2.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Day 10</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </div>
+ </div>
+
 </ion-content>

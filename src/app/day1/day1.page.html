@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Personalised Plan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="tripsslider">
+
+  
+  <ion-slides pager="true" [options]="slideOpts" >  
+    <ion-slide>  
+       <img src="../../assets/img/Basilica-of-Bom-Jesus.jpg"/>  
+       
+     </ion-slide>  
+   
+     <ion-slide>  
+       <img src="../../assets/img/Calangute-Beach.jpg"/>  
+       
+     </ion-slide>  
+   
+     <ion-slide>  
+       <img src="../../assets/img/Sinquerim-Beach.jpg"/>  
+       
+     </ion-slide>  
+   
+   </ion-slides> 
+  </div>
+
+  <section style="margin: 10px">
+    <header></header>
+    <ion-button (click)="bobj()"  size="small">Basilica-of-Bom-Jesus</ion-button>
+    <ion-button (click)="cb()"  size="small" color="secondary">Calangute-Beach</ion-button>
+    <ion-button (click)="sb()"  size="small" color="tertiary">Sinquerim-Beach</ion-button>
+  </section>
+
+  <div style="margin: 10px">
+    <ion-item>
+      <ion-label color="primary">Basilica-of-Bom-Jesus</ion-label>
+      <ion-icon name="star-sharp" style="color: gold"></ion-icon>
+      <ion-icon name="star-sharp" style="color: gold"></ion-icon>
+      <ion-icon name="star-sharp" style="color: gold"></ion-icon>
+      <ion-icon name="star-sharp"></ion-icon>
+      <ion-icon name="star-sharp"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Calangute-Beach</ion-label>
+      <ion-icon name="star-sharp" style="color: rgb(137, 243, 16)"></ion-icon>
+      <ion-icon name="star-sharp" style="color: rgb(137, 243, 16)"></ion-icon>
+      <ion-icon name="star-sharp"></ion-icon>
+      <ion-icon name="star-sharp"></ion-icon>
+      <ion-icon name="star-sharp"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Sinquerim-Beach</ion-label>
+      <ion-icon name="star-sharp" style="color: rgba(243, 16, 232, 0.966)"></ion-icon>
+      <ion-icon name="star-sharp" style="color: rgba(243, 16, 232, 0.966)"></ion-icon>
+      <ion-icon name="star-sharp" style="color: rgba(243, 16, 232, 0.966)"></ion-icon>
+      <ion-icon name="star-sharp" style="color: rgba(243, 16, 232, 0.966)"></ion-icon>
+      <ion-icon name="star-sharp"></ion-icon>
+    </ion-item>
+    <div *ngIf="status">
+      <h4 color="primary">Intro</h4>
+      <p color="primary"> The Basilica of Bom Jesus is a Roman Catholic basilica located in Goa, India, and is part of the Churches and convents of Goa UNESCO World Heritage Site.</p>
+      <ion-item>
+        <ion-label color="primary">Transportation</ion-label>
+        <ion-icon name="bus-sharp" color="secondary"></ion-icon>
+        <ion-icon name="airplane-sharp" color="secondary" ></ion-icon>
+        <ion-icon name="bicycle-sharp"  ></ion-icon>
+        <ion-icon name="walk-sharp" color="secondary"></ion-icon>
+      </ion-item>
+      <img src="../../assets/img/Capture.PNG"/>  
+    </div> 
+    <div *ngIf="status1">
+      <h4 color="primary">Intro</h4>
+      <p color="primary">Calangute is a town in North Goa, famous for its beach. The beach is the largest in North Goa and visited by thousands of domestic and international tourists alike.</p>
+      <ion-item>
+        <ion-label color="primary">Transportation</ion-label>
+        <ion-icon name="bus-sharp" color="secondary"></ion-icon>
+        <ion-icon name="airplane-sharp"></ion-icon>
+        <ion-icon name="bicycle-sharp"  ></ion-icon>
+        <ion-icon name="walk-sharp" color="secondary"></ion-icon>
+      </ion-item>
+     
+      <img src="../../assets/img/Capture1.PNG"/> 
+     
+    </div> 
+    <div *ngIf="status2">
+      <h4 color="primary">Intro</h4>
+      <p color="primary">Sinquerim Beach boasts of an amazing shoreline with and extent of sand. The beach is located north of the popular beaches of Goa including Calangute, Baga, and Candolim.</p>
+      <ion-item>
+        <ion-label color="primary">Transportation</ion-label>
+        <ion-icon name="bus-sharp"></ion-icon>
+        <ion-icon name="airplane-sharp"></ion-icon>
+        <ion-icon name="bicycle-sharp"  color="secondary"></ion-icon>
+        <ion-icon name="walk-sharp" color="secondary"></ion-icon>
+      </ion-item>
+      <img src="../../assets/img/Capture2.PNG"/>  
+    </div> 
+  </div>
+
+</ion-content>
+
