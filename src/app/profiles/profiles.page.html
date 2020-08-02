@@ -1,9 +1,78 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>profiles</ion-title>
-  </ion-toolbar>
+  <ion-navbar>
+    <ion-title>
+      <h1>Profile</h1>
+    </ion-title>
+  </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true">
+  <ion-header>
+   <ion-toolbar color="success">
+     <ion-title size="medium"> Profile </ion-title>
+   </ion-toolbar>
+ </ion-header>
+
+
+  
+<ion-list>
+    <ion-item>
+        <ion-label floating>Nickname :</ion-label>
+        <ion-input type="text" value="" id="mname" [(ngModel)]="model.name"></ion-input>
+              {{dataReceived}}
+      </ion-item>            
+      <ion-item>
+        <ion-label floating>Email ID :</ion-label>
+        <ion-input   type="text"  id="meid" [(ngModel)]="model.eid"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Mobile :</ion-label>
+        <ion-input   type="text"    id="mpno" [(ngModel)]="model.pno"></ion-input>
+      </ion-item><ion-item>
+        <ion-label floating>City :</ion-label>
+        <ion-input   type="text"   id="mcity" [(ngModel)]="model.city"></ion-input>
+      </ion-item>
+      <ion-item>
+          <button type="button" (click)="addMessage()" ion-button full >Submit</button>
+      </ion-item>
+</ion-list>
+
+  <ion-card>
+    <ion-card-header>
+      Swipe to Update Details
+    </ion-card-header>
+  </ion-card>
+  <ion-list>
+    <ion-item-sliding *ngFor="let message of messages">
+      <ion-item>
+        
+        <h3>Name: {{message.name}}
+          {{dataReceived}}
+        </h3>
+      </ion-item>
+        
+      <ion-item><p>Email: {{message.email}}</p>
+      </ion-item>
+        
+      <ion-item><p>Mobile: {{message.mobile}}</p>
+      </ion-item>
+
+      <ion-item>
+        <p>City: {{message.city}}</p>
+      </ion-item>
+        
+      
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteMessage(message.$key)">
+        <ion-icon name="ios-trash"></ion-icon>
+        delete
+      </button>
+      <button ion-button color="success" (click)="updateMessage(message)">
+          <ion-icon name="ios-create"></ion-icon>
+          edit
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>
