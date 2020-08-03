@@ -61,7 +61,8 @@ export class SignInPage {
     // As we are calling the Angular router navigation inside a subscribe method, the navigation will be triggered outside Angular zone.
     // That's why we need to wrap the router navigation call inside an ngZone wrapper
     this.ngZone.run(() => {
-      this.router.navigate(['profile']);
+      var a = document.getElementById('emailid') as HTMLInputElement;
+      this.router.navigate(['profile'],{queryParams : {emailid:a.value}});
     });
   }
 

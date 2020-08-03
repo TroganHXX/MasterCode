@@ -19,15 +19,15 @@
     <ion-item>
         <ion-label floating>Nickname :</ion-label>
         <ion-input type="text" value="" id="mname" [(ngModel)]="model.name"></ion-input>
-              {{dataReceived}}
+              
       </ion-item>            
       <ion-item>
         <ion-label floating>Email ID :</ion-label>
-        <ion-input   type="text"  id="meid" [(ngModel)]="model.eid"></ion-input>
+        <ion-input   type="text"  id="meid" [(ngModel)]="model.email"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>Mobile :</ion-label>
-        <ion-input   type="text"    id="mpno" [(ngModel)]="model.pno"></ion-input>
+        <ion-input   type="text"    id="mpno" [(ngModel)]="model.mobile"></ion-input>
       </ion-item><ion-item>
         <ion-label floating>City :</ion-label>
         <ion-input   type="text"   id="mcity" [(ngModel)]="model.city"></ion-input>
@@ -46,9 +46,9 @@
     <ion-item-sliding *ngFor="let message of messages">
       <ion-item>
         
-        <h3>Name: {{message.name}}
-          {{dataReceived}}
-        </h3>
+        <p>Name: {{message.name}}
+         
+        </p>
       </ion-item>
         
       <ion-item><p>Email: {{message.email}}</p>

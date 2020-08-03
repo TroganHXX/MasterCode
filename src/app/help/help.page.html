@@ -1,9 +1,56 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>help</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>
+      SOS
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="secondary">
+      <ion-title size="large">SOS</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-card color="tertiary">
+    <div class="ion-padding">
+      <img src="https://www.hatchwise.com/entry/L975148-20170308144636.png">
+    <ion-item color="secondary">
+<ion-label><ion-text color="dark">
+  <p>Want to report an issue ?
+   <br> Contact us through mail</p>
+</ion-text>
+</ion-label>
+    </ion-item>
 
+    
+    <ion-button  (click)="OpenEmailComposer()"><ion-icon name="mail-outline"></ion-icon></ion-button>
+   
+  </div>
+</ion-card>
+
+<ion-card>
+  <ion-item color="secondary">
+<ion-label>
+<ion-text size="large"  color="tertiary">Your Safety ,Our Responsibility</ion-text>
+</ion-label>
+  </ion-item>
+</ion-card>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger">
+      SOS
+    </ion-fab-button >
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="OpenMail()">
+        <ion-icon name="fitness-outline"></ion-icon>
+      </ion-fab-button>
+      
+      <ion-fab-button (click)="OpenMails()">
+        <ion-icon name="star"></ion-icon>
+      </ion-fab-button>
+       
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

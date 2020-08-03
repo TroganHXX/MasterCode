@@ -9,6 +9,9 @@ export const environment = {
     authDomain: "master-shard-283603.firebaseapp.com",
     databaseURL: "https://master-shard-283603.firebaseio.com",
     projectId: "master-shard-283603",
+  },
+  dialogflow: {
+    angularBot: 'ab6b4bbfd3833706d8531b4625cde4140d6e57ae'
   }
 };
 

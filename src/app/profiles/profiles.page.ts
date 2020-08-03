@@ -85,7 +85,7 @@ getAllDocuments(collection: string): Promise<any> {
                 let arr = [];
                 querySnapshot.forEach(function (doc) {
                     var obj = JSON.parse(JSON.stringify(doc.data()));
-                    var b = window.location.href.split("emailid=")[1];
+                    var b = window.location.href.split("emailid")[3].split("%5C%22:%5C%22")[1].split("%5C%22%7D%22%7D")[0].split(",")[0];
                     if(obj.email==b){
 
                       obj.$key = doc.id

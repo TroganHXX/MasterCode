@@ -11,28 +11,25 @@
 
 <ion-content >
  
-  <div class="tripsslider" *ngIf="status">
+  <div *ngIf="status">
 
     <ion-slides pager="true" [options]="slideOpts" >  
-    <div class="swiper-slide img">
-     <ion-slide>  
-      
-        <img src="../../assets/img/Basilica-of-Bom-Jesus.jpg"/>  
+      <ion-slide>  
+         <img src="../../assets/img/Basilica-of-Bom-Jesus.jpg"/>  
+         
+       </ion-slide>  
      
-              </ion-slide>  
-    
-      <ion-slide>  
-        <img src="../../assets/img/Calangute-Beach.jpg"/>  
-        
-      </ion-slide>  
-    
-      <ion-slide>  
-        <img src="../../assets/img/Sinquerim-Beach.jpg"/>  
-        
-      </ion-slide>
-  
-    </div>
-    </ion-slides>  
+       <ion-slide>  
+         <img src="../../assets/img/Calangute-Beach.jpg"/>  
+         
+       </ion-slide>  
+     
+       <ion-slide>  
+         <img src="../../assets/img/Sinquerim-Beach.jpg"/>  
+         
+       </ion-slide>  
+     
+     </ion-slides> 
   
   </div>
   <div class="hello">
@@ -47,6 +44,11 @@
      
   </p>
 </div>
+<ion-fab horizontal="end" vertical="center" slot="fixed">
+  <ion-fab-button  (click)="to()" >
+    <ion-icon  name="person-circle-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 
   </ion-content>
 
@@ -59,8 +61,8 @@
       </ion-tab-button>
 
       <ion-tab-button tab="tab2" (click)="hide()">
-          <ion-icon color="success" name="ellipse"></ion-icon>
-          <ion-label color="success">Tab 2</ion-label>
+        <ion-icon  color="success" name="chatbox-ellipses-outline"></ion-icon>
+          <ion-label color="success">Chatbot</ion-label>
       </ion-tab-button>
 
       <ion-tab-button  tab="nearby" (click)="hide()">
@@ -73,10 +75,12 @@
           <ion-label color="success">Help</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button  tab="profiles" (click)="hide()">
-          <ion-icon color="success" name="person-circle-sharp"></ion-icon>
-          <ion-label color="success">Profile</ion-label>
+      <ion-tab-button  tab="tips" (click)="hide()">
+        <ion-icon color="success" name="bulb"></ion-icon>
+          <ion-label color="success">Tips</ion-label>
       </ion-tab-button>
+
+      
   </ion-tab-bar>
 
 </ion-tabs>

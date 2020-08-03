@@ -1,9 +1,27 @@
-<ion-header>
-  <ion-toolba color="secondary">
-    <ion-title>setting</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Chatbot
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<p> Am I Useless ?</p>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"> ChatBot </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <iframe
+    allow="microphone;"
+    width="360"
+    height="580"
+    src="https://console.dialogflow.com/api-client/demo/embedded/95ebb828-c818-48a9-9e67-36d6afcbcb09">
+</iframe>
+      
+  </div>
+
+<app-assistant></app-assistant>
 </ion-content>

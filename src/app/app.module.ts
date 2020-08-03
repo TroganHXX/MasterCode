@@ -16,6 +16,8 @@ import { FirebaseAuthService } from './firebase-auth.service';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage'
 
+
+
 export const firebaseConfig = {
   
   apiKey: "AIzaSyBrWBJqlInJWKRN6G7JghInNKEmxSvav5A",
@@ -43,7 +45,9 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     FirebaseAuthService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    
   ],
   bootstrap: [AppComponent]
 })

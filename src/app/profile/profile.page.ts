@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProfileModel } from './profile.model';
 import { FirebaseAuthService } from '../firebase-auth.service';
+var a;
 
 @Component({
   selector: 'app-profile',
@@ -10,12 +11,23 @@ import { FirebaseAuthService } from '../firebase-auth.service';
 })
 export class ProfilePage implements OnInit {
   user: ProfileModel;
+  dataReceived: string="";
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private authService: FirebaseAuthService
-  ) { }
+    private authService: FirebaseAuthService,
+    public activatedRoute : ActivatedRoute
+
+    
+  ) {
+    this.activatedRoute.queryParams.subscribe((data) => {
+      this.dataReceived = JSON.stringify(data);
+      a = this.dataReceived;
+      console.log("HI");
+      console.log(data);
+    })
+  }
 
   ngOnInit() {
     this.route.data
@@ -34,7 +46,7 @@ export class ProfilePage implements OnInit {
   }
 
   go(){
-    this.router.navigate(['home']);
+    this.router.navigate(['home'],{queryParams : {emailid:this.dataReceived}});
   }
 
 }

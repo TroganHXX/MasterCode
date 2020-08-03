@@ -112,6 +112,14 @@ const routes: Routes = [
     path: 'day1',
     loadChildren: () => import('./day1/day1.module').then( m => m.Day1PageModule)
   },
+  {
+    path: 'tips',
+    loadChildren: () => import('./tips/tips.module').then( m => m.TipsPageModule)
+  },
+  {
+    path: 'roadplan',
+    loadChildren: () => import('./roadplan/roadplan.module').then( m => m.RoadplanPageModule)
+  },
 
 ];
 

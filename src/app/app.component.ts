@@ -50,20 +50,25 @@ export class AppComponent {
             title: "Videos",
             url: "/video",
             icon: "videocam"
+        }, {
+            title: "Road Plan",
+            url: "/roadplan",
+            icon: "bicycle"
         },
         {
             title: "Social channels",
             url: "/social",
             icon: "share-social-sharp"
-        }, {
+        }, 
+        {
+          title: "settings",
+          url: "/setting",
+          icon: "settings-sharp"
+      },{
             title: "About",
             url: "/about",
             icon: "people-circle-sharp"
-        }, {
-            title: "settings",
-            url: "/setting",
-            icon: "settings-sharp"
-        },
+        }, 
         ]
 }
 }
