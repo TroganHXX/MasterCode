@@ -1,5 +1,5 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="sign-in"></ion-back-button>
     </ion-buttons>
@@ -16,26 +16,26 @@
       <p>{{user.description}}</p>
     </ion-col>
   </ion-row>
-  <ion-row>
+  <ion-row color="tertiary">
     <ion-col size="12">
       <h4>Mobile</h4>
       <p>
         {{user.phoneNumber}}
       </p>
     </ion-col>
-    <ion-col size="12">
+    <ion-col color="tertiary"size="12">
       <h4>Email</h4>
       <p>
         {{user.email}}
       </p>
     </ion-col>
-    <ion-col size="12">
+    <ion-col color="tertiary"size="12">
       <h4>Auth Provider</h4>
       <p>
         {{user.provider}}
       </p>
     </ion-col>
-    <ion-col size="12">
+    <ion-col color="tertiary" size="12">
       <ion-button expand="block" fill="outline" color="primary" (click)="go()">Go to home</ion-button>
       <ion-button expand="block" fill="outline" color="primary" (click)="signOut()">Sign out</ion-button>
     </ion-col>

@@ -61,9 +61,9 @@ export class AppComponent {
             icon: "share-social-sharp"
         }, 
         {
-          title: "settings",
+          title: "Landmark Recognition",
           url: "/setting",
-          icon: "settings-sharp"
+          icon: "aperture-outline"
       },{
             title: "About",
             url: "/about",

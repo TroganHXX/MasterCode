@@ -1,27 +1,35 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-title>
-      Chatbot
+      Landmark Recognition
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large"> ChatBot </ion-title>
+<ion-content fullscreen="true">
+   
+  <ion-header>
+    <ion-toolbar color="secondry">
+      <ion-title>Vision</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <iframe
-    allow="microphone;"
-    width="360"
-    height="580"
-    src="https://console.dialogflow.com/api-client/demo/embedded/95ebb828-c818-48a9-9e67-36d6afcbcb09">
-</iframe>
-      
-  </div>
-
-<app-assistant></app-assistant>
+</ion-content>
+  
+  <ion-content class="ion-padding">
+    <ion-button size="small" (click)="getPicture('camera')">
+      <ion-icon name="camera" slot="start"></ion-icon>
+      <ion-label>Camera</ion-label>
+    </ion-button>
+    <ion-button size="small" (click)="getPicture('gallery')">
+      <ion-icon name="image" slot="start"></ion-icon>
+      <ion-label>Gallery</ion-label>
+    </ion-button>
+    <input type="file" *ngIf="isDesktop" #filePicker (change)="onFileChoose($event)"/>
+  
+    <ion-card *ngIf="photo">
+      <ion-card-content>
+        <img [src]="photo">
+      </ion-card-content>
+    </ion-card>
+  
 </ion-content>
