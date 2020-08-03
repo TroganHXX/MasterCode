@@ -3,6 +3,8 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Router } from '@angular/router';
 
+var age;
+
 @Component({
   selector: 'app-things',
   templateUrl: './things.page.html',
@@ -23,7 +25,7 @@ export class ThingsPage implements OnInit {
 
   plancreate(){
     var a = document.getElementById('abc') as HTMLInputElement;
-
+    age = document.getElementById('agedata') as HTMLInputElement;
     if(a.value=="1"){ var b = document.getElementById('cardday1') as HTMLInputElement; 
       this.status1=true;
       this.status2=false;
@@ -148,7 +150,8 @@ export class ThingsPage implements OnInit {
 
   Day1(){
     
-    this.router.navigate(['day1']);
+    this.router.navigate(['day1'],{queryParams : {ageinfo:age.value}});
+    console.log(age.value);
   }
 
   Day2(){

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="secondary">
+  <ion-toolbar>
     <ion-title>Personalised Plan</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -29,9 +29,10 @@
 
   <section style="margin: 10px">
     <header></header>
-    <ion-button (click)="bobj()"  size="small" color="success">Basilica-of-Bom-Jesus</ion-button>
+    <ion-button (click)="bobj()"  size="small">Basilica-of-Bom-Jesus</ion-button>
     <ion-button (click)="cb()"  size="small" color="secondary">Calangute-Beach</ion-button>
-    <ion-button (click)="sb()"  size="small" color="danger">Sinquerim-Beach</ion-button>
+    <ion-button *ngIf="status4" (click)="sb()"  size="small" color="dark">Sinquerim-Beach</ion-button>
+    <ion-button *ngIf="status5" (click)="temp()"  size="small" color="dark">Saptakoteshwar Temple</ion-button>
   </section>
 
   <div style="margin: 10px">
@@ -69,7 +70,11 @@
         <ion-icon name="bicycle-sharp"  ></ion-icon>
         <ion-icon name="walk-sharp" color="secondary"></ion-icon>
       </ion-item>
+      <ion-card>
+        <ion-card-content>
       <img src="../../assets/img/Capture.PNG"/>  
+        </ion-card-content>
+      </ion-card>
     </div> 
     <div *ngIf="status1">
       <h4 color="primary">Intro</h4>
@@ -81,9 +86,11 @@
         <ion-icon name="bicycle-sharp"  ></ion-icon>
         <ion-icon name="walk-sharp" color="secondary"></ion-icon>
       </ion-item>
-     
+      <ion-card>
+        <ion-card-content>
       <img src="../../assets/img/Capture1.PNG"/> 
-     
+        </ion-card-content>
+      </ion-card>
     </div> 
     <div *ngIf="status2">
       <h4 color="primary">Intro</h4>
@@ -95,9 +102,29 @@
         <ion-icon name="bicycle-sharp"  color="secondary"></ion-icon>
         <ion-icon name="walk-sharp" color="secondary"></ion-icon>
       </ion-item>
-      <img src="../../assets/img/Capture2.PNG"/>  
+      <ion-card>
+        <ion-card-content>
+      <img src="../../assets/img/Capture2.PNG"/> 
+        </ion-card-content>
+      </ion-card> 
+    </div> 
+
+    <div *ngIf="status3">
+      <h4 color="primary">Intro</h4>
+      <p color="primary">Only one ancient temple of Goa that exists is that of Tambdi Surla Mahadev. The present day goan temples are of Nagara architecture with some alterations, this kind of architecture is unique in India.</p>
+      <ion-item>
+        <ion-label color="primary">Transportation</ion-label>
+        <ion-icon name="bus-sharp" color="secondary"></ion-icon>
+        <ion-icon name="airplane-sharp"></ion-icon>
+        <ion-icon name="bicycle-sharp"  color="secondary"></ion-icon>
+        <ion-icon name="walk-sharp" color="secondary"></ion-icon>
+      </ion-item>
+      <ion-card>
+        <ion-card-content>
+      <img src="../../assets/img/Capture3.PNG"/>  
+        </ion-card-content>
+      </ion-card>
     </div> 
   </div>
 
 </ion-content>
-
